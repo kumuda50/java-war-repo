@@ -10,7 +10,7 @@ pipeline {
             parallel { 
                 stage('Clone') { 
                     steps { 
-                        sh 'git clone https://github.com/Rakesh-k-ops/java-war-repo.git' 
+                        sh 'git clone https://github.com/Santhoshsb1/java-war-repo.git' 
                     } 
                 } 
                 stage('Build') { 
