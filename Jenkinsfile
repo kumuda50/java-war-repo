@@ -4,7 +4,7 @@ pipeline {
     environment {
         AWS_REGION = 'eu-north-1' // Change as per requirement
         ECR_REPO = '908027389474.dkr.ecr.eu-north-1.amazonaws.com/java-repo'
-        IMAGE_NAME = 'santhosh-application'
+        IMAGE_NAME = 'java-repo'
     }
 
     stages {
