@@ -1,5 +1,5 @@
  pipeline {
-    agent { label 'jagent' }
+    agent { label 'agent-build' }
 
     environment {
         AWS_REGION = 'eu-north-1' // Change as per requirement
@@ -10,7 +10,7 @@
     stages {
         stage('Clone Repository') {
             steps {
-                git branch: 'main', url: 'https://github.com/Santhoshsb1/java-war-repo.git'
+                git branch: 'main', url: 'https://github.com/kumuda50/java-war-repo.git'
             }
         }
 
