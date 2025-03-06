@@ -2,7 +2,7 @@ FROM maven:3.8.5-openjdk-17 AS builder
 
 WORKDIR /ops-app
 
-RUN git clone https://github.com/Rakesh-k-ops/java-war-repo.gi .
+RUN git clone https://github.com/Santhoshsb1/java-war-repo.git .
 
 RUN mvn clean package
 
