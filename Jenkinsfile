@@ -22,7 +22,7 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                sh 'sudo docker build -t $IMAGE_NAME .'
+                sh 'sudo docker build -t java-repo .'
             }
         }
 
@@ -30,9 +30,9 @@ pipeline {
             steps {
                 script {
                     sh '''
-                    aws ecr get-login-password --region $AWS_REGION | sudo docker login --username AWS --password-stdin $ECR_REPO
-                    sudo docker tag $IMAGE_NAME:latest $ECR_REPO/$IMAGE_NAME:latest
-                    sudo docker push $ECR_REPO/$IMAGE_NAME:latest
+                    aws ecr get-login-password --region eu-north-1 | sudo docker login --username AWS --password-stdin 908027389474.dkr.ecr.eu-north-1.amazonaws.com
+                    sudo docker tag java-repo:latest 908027389474.dkr.ecr.eu-north-1.amazonaws.com/java-repo:latest
+                    sudo docker push 908027389474.dkr.ecr.eu-north-1.amazonaws.com/java-repo:latest
                     '''
                 }
             }
